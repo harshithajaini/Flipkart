@@ -1,0 +1,31 @@
+.footer-main {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  margin-top: 10px;
+  padding: 20px 0px;
+}
+
+.footer-child {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  color: white;
+}
+
+.footer-child .footer-child-header {
+  color: #878787;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.footer-child .footer-links {
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.footer-child .footer-links:hover {
+  text-decoration: underline;
+}
