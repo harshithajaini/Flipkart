@@ -1,4 +1,4 @@
-import './categories.css'
+import './style.css'
 function Categories() {
   return (
     <div>
