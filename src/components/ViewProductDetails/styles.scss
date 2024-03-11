@@ -1,0 +1,91 @@
+.product-container-viewAProduct{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .product-container-viewAProduct .product-image-container {
+    flex: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width:50%;
+    height: 70vh;
+    justify-content: center;
+  }
+
+  .product-container-viewAProduct .productImage {
+    width: 70%;
+    height: 60%;
+    display: block;
+    align-self: center;
+    background: none;
+    // object-fit: contain;
+  }
+
+  .product-container-viewAProduct .additional-images {
+    width: 70%;
+    // height: 20%;
+    display: flex;
+    align-self: center;
+    margin-top: 5px;
+    justify-content: space-around;
+    // margin-top: 10px;
+    // object-fit: contain;
+  }
+
+  .product-container-viewAProduct .additional-image {
+    // width: calc(33% - 0.5px); /* Adjust width as needed */
+    height: 70%;
+    height:200px;
+    padding-right:2px;
+    // height: 100px; /* Fixed height */
+    // object-fit: contain;
+  }
+
+  .product-container-viewAProduct .additional-image:hover{
+    scale:1.02;
+  }
+
+  .product-container-viewAProduct .product-info-container {
+    flex: 1;
+    // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    padding: 20px;
+    line-height: 30px;
+    padding-top:50px;
+
+  }
+  .product-container-viewAProduct .productTitle{
+    padding-bottom: 20px;
+  }
+  .product-container-viewAProduct .cart-btn{
+  width: fit-content;
+  margin-top:20px;
+  padding:5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #2a55e5;
+  color: white;
+}
+.product-container-viewAProduct .product-discount{
+  color:#388e3c;
+  font-weight: 700;
+}
+.product-container-viewAProduct .productInfo{
+  width:fit-content;
+  display:inline;
+}
+
+.product-container-viewAProduct .productRating{
+  color: #FFA500;
+}

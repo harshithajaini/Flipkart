@@ -2,6 +2,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  margin-bottom:10px;
 }
 #imageContainer {
   display: flex;

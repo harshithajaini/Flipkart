@@ -1,13 +1,25 @@
-import Home from "./pages/Home"
-
-
+/* eslint-disable no-unused-vars */
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login'
+import ViewProducts from './components/ViewProducts';
+import ViewProductDetails from './components/ViewProductDetails';
+import Layout from './layout';
 function App() {
 
   return (
-    <>
-    <Home />
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/:query" element={<ViewProducts />} />
+          <Route path="/products/:productTitle" element={<ViewProductDetails />} />
+        </Route>
+        <Route path='/login' element={<Login />} />
+      </Routes>
+    </Router>
+
+  );
 }
 
-export default App
+export default App;

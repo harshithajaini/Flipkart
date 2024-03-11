@@ -4,10 +4,11 @@
   /* box-sizing: border-box; */
   width: auto;
   height: auto;
+  text-decoration: none;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f1f3f6;
 }
 
@@ -28,8 +29,6 @@ body {
   margin-bottom: 10px;
 }
 
-
-
 .logo {
   justify-self: center;
   place-items: center;
@@ -42,7 +41,6 @@ body {
   height: 50px;
   border: 1px;
   border-radius: 5px;
-
 }
 
 .search-container {
@@ -57,7 +55,6 @@ body {
   outline: none;
   border: none;
 }
-
 
 .search-btn {
   width: 50px;
@@ -94,16 +91,20 @@ body {
 .login {
   height: 100%;
   /* padding: 5px 8px; */
+}
 
+.product-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .icon {
-  padding:5px;
+  padding: 5px;
   display: flex;
 }
 
-.login-text{
-  margin-top:auto;
+.login-text {
+  margin-top: auto;
 }
 
 .login .login-container {
@@ -115,11 +116,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
+  color: black;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  margin-right: 5px;
 }
 
 .sign-up {
   margin-left: 5px;
-  color: blue;
+  text-decoration: none;
+  color:blue;
 }
 
 .login-dropdown-content {
@@ -147,12 +157,12 @@ body {
   justify-content: center;
   padding: 5px;
   color: black;
-  font-family: inter_regular,fallback-inter_regular,Arial,sans-serif;
+  font-family: inter_regular, fallback-inter_regular, Arial, sans-serif;
 }
 
-.login-dropdown-content li:first-child a{
-  margin:auto;
-  width:auto;
+.login-dropdown-content li:first-child a {
+  margin: auto;
+  width: auto;
 }
 
 .content-list-links:visited {
@@ -165,9 +175,8 @@ body {
   padding-bottom: 10px;
   padding-top: 10px;
   align-content: center;
-  text-align:center;
+  text-align: center;
 }
-
 
 .login-dropdown-icons {
   padding-right: 25px;
@@ -187,12 +196,16 @@ body {
   border-bottom: 1px solid black;
 }
 
-
-.login:hover .icon {
-  filter: invert(99%) sepia(0%) saturate(7453%) hue-rotate(220deg) brightness(115%) contrast(97%);
+.login:hover .login-container {
+  color: white;
 }
 
-.login:hover .login-link{
+.login:hover .icon {
+  filter: invert(99%) sepia(0%) saturate(7453%) hue-rotate(220deg)
+    brightness(115%) contrast(97%);
+}
+
+.login:hover .login-link {
   color: white;
 }
 
@@ -216,12 +229,12 @@ body {
   font-size: 16px;
 }
 
-.extra-links{
-  position:relative;
+.extra-links {
+  position: relative;
 }
 
 .extra-links-container {
-  position:relative;
+  position: relative;
 }
 
 .extra-links .icon {
@@ -230,7 +243,7 @@ body {
 .extra-links-dropdown {
   display: none;
   position: absolute;
-  right:0;
+  right: 0;
   width: 250px;
   border: 1px solid lightslategray;
   border-radius: 5px;
@@ -239,10 +252,10 @@ body {
   z-index: 100;
 }
 
-.extra-links-container:hover{
+.extra-links-container:hover {
   border: 1px solid grey;
   border-radius: 8px;
-  background-color:#f7f7f7;
+  background-color: #f7f7f7;
 }
 
 .extra-links:hover .extra-links-dropdown {
@@ -262,7 +275,6 @@ body {
   border-radius: 5px;
 }
 
-
 @media screen and (max-width: 1300px) {
   .product .product-img {
     width: 200px;
@@ -273,9 +285,7 @@ body {
   }
 }
 
-
 @media screen and (max-width: 900px) {
-
   .become-seller {
     display: none;
   }
@@ -283,14 +293,12 @@ body {
   .search-box {
     width: 300px;
   }
-
 }
 
 @media screen and (max-width: 720px) {
   .cart {
     display: none;
   }
-
 
   .login {
     display: none;
@@ -300,5 +308,4 @@ body {
     font-size: 10px;
     width: 185px;
   }
-
 }
