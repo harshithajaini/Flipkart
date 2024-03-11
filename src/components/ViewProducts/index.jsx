@@ -41,6 +41,7 @@ const ViewProducts = () => {
 
   return (
     <div className='whole-products'>
+      <h2 style={{ textAlign:'center',marginTop:'5px', marginBottom:'5px'}}>Showing results for {newQuery}</h2>
       <ul className='product-list'>
       {currentProducts.map((product) => (
         <div className="product-container" key={product.id}>
