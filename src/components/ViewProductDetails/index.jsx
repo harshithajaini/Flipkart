@@ -12,7 +12,7 @@ function ViewProductDetails() {
   const { isLoggedIn } = useContext(AuthContext);
   const query = useParams();
   const [showLoginMessage, setShowLoginMessage] = useState(false);
-  const [addedToCart, setAddedToCart] = useState(false);
+
 
   useEffect(() => {
     const fetchSearchResults = async () => {
@@ -51,12 +51,8 @@ function ViewProductDetails() {
         <Link to="/login">Log In</Link>
       </div>
       )}
-      {addedToCart && (
-        <div className="added-to-cart-message">
-          <p>Product added to cart successfully!</p>
-        </div>
-      )}
-      {!showLoginMessage && !addedToCart && (
+
+      {!showLoginMessage &&  (
         <>
           <div className="product-image-container">
             <img src={prodapi[0].thumbnail} alt={prodapi[0].title} className="productImage" />

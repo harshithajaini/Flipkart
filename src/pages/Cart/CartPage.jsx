@@ -49,11 +49,11 @@ function CartPage() {
             <div>
               <div className="cart-total">
                 <h1 className="total-text">Total: ${getCartTotal()}</h1>
-              </div>
-              <button className="clear-btn" onClick={clearCart} style={{ cursor: 'pointer' }}>
+                <button className="clear-btn" onClick={clearCart} style={{ cursor: 'pointer' }}>
                 Clear cart
               </button>
-              <button>Checkout</button>
+              </div>
+
             </div>
           ) : (
             <div className="empty-cart-page">
