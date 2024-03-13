@@ -9,7 +9,7 @@ const ViewProducts = () => {
   const productsPerPage = 6;
   const query = useParams();
   const [totalProducts, setTotalProducts] = useState();
-  const newQuery = query.query.substring(0, query.query.length - 1);
+  const newQuery = query.query.substring(0, query.query.length);
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 
@@ -41,7 +41,7 @@ const ViewProducts = () => {
 
   return (
     <div className='whole-products'>
-      <h2 style={{ textAlign:'center',marginTop:'5px', marginBottom:'5px'}}>Showing results for {newQuery}</h2>
+      <h2 style={{ textAlign:'center',marginTop:'20px', marginBottom:'15px', color:"black"}}>Showing Results for {newQuery}</h2>
       <ul className='product-list'>
       {currentProducts.map((product) => (
         <div className="product-container" key={product.id}>

@@ -2,21 +2,13 @@
 import "./style.css";
 import SearchComponent from "../SearchBox/search";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import {CartContext} from "../../context/CartContext";
+import { AuthContext } from "../../context/AuthContext";
 
 function Header() {
-  const [isLoggedin, setLoggedin] = useState(false);
-
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      setLoggedin(true);
-    }
-  }, [isLoggedin])
-
-  const handleLogout = () => {
-    setLoggedin(false);
-    localStorage.removeItem("token");
-  }
+  const { cartItems } = useContext(CartContext);
+  const { isLoggedIn,  logout }=useContext(AuthContext);
   return (
     <>
       <div className="nav-container">
@@ -27,13 +19,13 @@ function Header() {
         </div>
         <SearchComponent />
         <div className="login" style={{ cursor: "pointer" }} >
-          {!isLoggedin ?(<Link to="/login">
+          {!isLoggedIn ?(<Link to="/login">
             <button className="login-container">
               <img src="/profile.svg" className="icon" alt="Profile Icon" />
               Login
             </button>
           </Link>):(
-            <button className="login-container" onClick={handleLogout}>
+            <button className="login-container" onClick={logout}>
               <img src="/profile.svg" className="icon" alt="Profile Icon" />
               Logout
             </button>)}
@@ -111,10 +103,13 @@ function Header() {
             </li>
           </div>
         </div>
-        <div className="cart" style={{ cursor: "pointer" }}>
-          <img src="/cart.svg" className="icon" />
-          Cart
+        <Link to={'/cart'} style={{display:"flex", textAlign:"center", color:"black"}}>
+        <div className="cart" style={{ cursor: "pointer" ,display:"flex"}}>
+          <img src="/cart.svg" className="icon cart-icon" />
+
+          Cart<div className="cart-count">{cartItems.length}</div>
         </div>
+        </Link>
         <div className="become-seller" style={{ cursor: "pointer" }}>
           <img
             src="/become-seller.svg"

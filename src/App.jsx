@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import ViewProducts from './components/ViewProducts';
 import ViewProductDetails from './components/ViewProductDetails';
 import Layout from './layout';
+import CartPage from './pages/Cart/CartPage';
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/:query" element={<ViewProducts />} />
           <Route path="/products/:productTitle" element={<ViewProductDetails />} />
+          <Route path="/cart" element={<CartPage />} />
         </Route>
         <Route path='/login' element={<Login />} />
       </Routes>

@@ -4,14 +4,14 @@ import Footer from "./components/Footer";
 
 function Layout(){
   return(
-    <>
-    <Header />
-    <Outlet />
-    <Footer />
-
-    </>
-  )
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh',  color: "white" }}>
+      <Header />
+      <div style={{ flex: 1 , background: "white"}}>
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
+  );
 }
-
 
 export default Layout;

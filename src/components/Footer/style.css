@@ -4,6 +4,11 @@
   background-color: black;
   margin-top: 10px;
   padding: 20px 0px;
+  bottom: 0;
+  position: relative;
+  /* left: 0; */
+  bottom: 0;
+  /* right: 0; */
 }
 
 .footer-child {
