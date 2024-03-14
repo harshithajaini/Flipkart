@@ -50,8 +50,11 @@ function CartPage() {
               <div className="cart-total">
                 <h1 className="total-text">Total: ${getCartTotal()}</h1>
                 <button className="clear-btn" onClick={clearCart} style={{ cursor: 'pointer' }}>
-                Clear cart
+                Clear Cart
               </button>
+              <Link to={'/cart/checkout'}><button className="clear-btn" style={{ cursor: 'pointer', background:"green"}}>
+                Checkout
+              </button></Link>
               </div>
 
             </div>
@@ -66,7 +69,6 @@ function CartPage() {
       ) : (
         <div className="login-message">
           <h2>Please log in to view your cart</h2>
-          <p>Log in  to access your shopping cart.</p>
           <Link to="/login">Log In</Link>
         </div>
       )}

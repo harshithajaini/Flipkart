@@ -30,7 +30,7 @@ const SearchComponent = () => {
           const data = await fetchProducts(debouncedQuery);
           setSearchResults(data);
         } else {
-          setSearchResults([]); 
+          setSearchResults([]);
         }
       } catch (error) {
         console.error("Error fetching search results:", error);

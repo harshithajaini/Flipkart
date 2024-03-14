@@ -107,7 +107,7 @@ function Header() {
         <div className="cart" style={{ cursor: "pointer" ,display:"flex"}}>
           <img src="/cart.svg" className="icon cart-icon" />
 
-          Cart<div className="cart-count">{cartItems.length}</div>
+          Cart{isLoggedIn && cartItems.length>0 && <div className="cart-count">{cartItems.length}</div>}
         </div>
         </Link>
         <div className="become-seller" style={{ cursor: "pointer" }}>

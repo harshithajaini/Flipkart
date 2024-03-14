@@ -8,8 +8,7 @@ function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    if(username && password)
-    {
+    if (username && password) {
       try {
         const response = await fetch('https://dummyjson.com/auth/login', {
           method: 'POST',
@@ -31,20 +30,19 @@ function Login() {
       } catch (error) {
         setError(error.message);
       }
-    }
-    else{
-      setError('Enter valid username and password')
-
+    } else {
+      setError('Enter valid username and password');
     }
   };
 
   return (
     <div className="login-page">
       <div className="form">
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleLogin}>
           <h3>SIGN IN TO YOUR ACCOUNT</h3>
           <input
             type="text"
+            tabIndex={1}
             required
             placeholder="Enter your Username"
             value={username}
@@ -52,14 +50,14 @@ function Login() {
           />
           <input
             type="password"
+            tabIndex={2}
             required
             placeholder="Enter your Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           {error && <p className="error-message">{error}</p>}
-          <button className="verify-btn" type='submit' onClick={handleLogin}>Login</button>
-
+          <button className="verify-btn" type='submit'>Login</button>
         </form>
       </div>
     </div>
