@@ -1,0 +1,32 @@
+#carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom:10px;
+}
+#imageContainer {
+  display: flex;
+  transition: transform 5s ease-in-out;
+}
+.carousel-img {
+  width: 100%;
+  height: auto;
+  width:100%;
+}
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+}
+#prevButton {
+  left: 10px;
+}
+#nextButton {
+  right: 10px;
+}
